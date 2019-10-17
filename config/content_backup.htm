@@ -21,7 +21,14 @@
 <p>markdown 與 pelican 在 CMSiMDE 主要用來產生靜態網誌, 而網誌的設計與編輯則透過 Leo Editor 進行, 此外 CMSiMDE 除了網際內容管理與網誌之外, 還透過 Leo Editor 管理 reveal.js 網際簡報系統.</p>
 <p>flask_cors 模組, 在 CMSiMDE 是為了配合 Dartpad 程式編寫過程, 需要跨網站擷取資料的需求而加入, 在舊版的可攜系統中若無此模組, 執行 CMSiMDE 之前必須透過</p>
 <p>python -m pip install flask_cors </p>
-<p>安裝</p><h3>設定識別資料</h3><h1>Solvespace 編譯</h1>
+<p>安裝</p><h3>設定識別資料</h3>
+<p>1. 設定使用者名稱及電子郵件</p>
+<p>git config  --global user.name  "username"</p>
+<p><span>git config  --global user.email  "e<span>mail</span>"</span></p>
+<p><span>2. 通過代理主機連接HTTP</span></p>
+<p><span>git config  --global http.proxy<span> [位址]:連接阜</span></span></p>
+<p><span></span></p>
+<p></p><h1>Solvespace 編譯</h1>
 <h4>編譯步驟:</h4>
 <p>git version 查驗 git 版本</p>
 <p>git 2.13 版本以上, 可以使用下列 git clone<span> </span><span>--recurse-submodules 取得所有子模組資料</span></p>
@@ -49,3 +56,4 @@
 <p>==========================================================</p>
 <p>接著回到 solvespace 原始碼目錄, 建立 build 目錄後進入 build 目錄, 執行:</p>
 <p><span>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</span><br/><span>mingw32-make</span></p>
+<h2><span>操作練習</span></h2>
