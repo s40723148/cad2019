@@ -154,18 +154,72 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">操作練習 << <a href='操作練習.html'>Previous</a> <a href='零組件繪製.html'>Next</a> >> 零組件繪製<br /><h1>Task 1</h1>
+<p>參數式繪圖軟體 Solvespace 編譯、零組件繪圖與應用.</p>
+<p>利用 <a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a><span> 學習如何完成 <a href="https://github.com/solvespace/solvespace">https://github.com/solvespace/solvespace</a> 原始碼的編譯, 並透過 <a href="http://solvespace.com/">http://solvespace.com</a> 學習如何建立 <a href="https://github.com/mdecourse/mocad/files/3583773/web_vrep2.zip">web_rep2.zip</a> 中所需的行走車.</span></p>
+<p><span>其中必須將所建立的零組件轉入 <a href="https://drive.google.com/file/d/1cZFSsLEoGOBYojzKzFEf4YH2l--pbS-9/view?usp=sharing">V-rep 3.6.1 rev 4.7z</a><span> 進行運動組立後, 以 Lua 或 Python 進行控制.</span></span></p>
+<p><span><span>網際 V-rep 模型控制:<span> </span><a href="https://github.com/mdecourse/mocad/files/3583773/web_vrep2.zip">web_vrep2.zip</a> (<a href="http://mde.tw/cad2019/downloads/web_vrep2.zip">local</a>)</span></span></p>
+<p><span>app.py</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template, redirect
+from vrep_linefollower import VrepLineFollower
+ 
+line_follower = VrepLineFollower()
+ 
+app = Flask(__name__)
+ 
+@app.route("/")
+def index():
+  return render_template('controls.html')
+ 
+@app.route('/do/&lt;direction&gt;')
+def do(direction):
+  global line_follower
+  line_follower.to_direction(direction)
+  return redirect('/')
+ 
+ 
+if __name__ == '__main__':
+  app.run(host='127.0.0.1')</pre>
+<p></p>
+<p><span>vrep_linefollower.py</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+ 
+class VrepLineFollower:
+  def __init__(self):
+    vrep.simxFinish(-1) # just in case, close all opened connections
+    self.clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+ 
+    self.wheelRadius = 0.027
+    self.linearVelocityLeft  = 0.1
+    self.linearVelocityRight = 0.1
+ 
+    # vectors [left, right]
+    self.direction_v = {
+     'up':    [ 0.01,  0.01],
+     'down':  [-0.01, -0.01],
+     'left':  [-0.01,  0.01],
+     'right': [ 0.01, -0.01]
+    }
+ 
+    res, self.leftJointDynamic  = vrep.simxGetObjectHandle(self.clientID, "DynamicLeftJoint",  vrep.simx_opmode_oneshot_wait)
+    res, self.rightJointDynamic = vrep.simxGetObjectHandle(self.clientID, "DynamicRightJoint", vrep.simx_opmode_oneshot_wait)
+ 
+  # direction = 'up' | 'down' | 'left' | 'right'
+  def to_direction(self, direction):
+    direction_vector = self.direction_v[direction]
+    self.linearVelocityLeft  += direction_vector[0]
+    self.linearVelocityRight += direction_vector[1]
+    self.set_motors()
+ 
+  # private
+  def set_motors(self):
+    t_left  = self.linearVelocityLeft  / self.wheelRadius
+    t_right = self.linearVelocityRight / self.wheelRadius
+    vrep.simxSetJointTargetVelocity(self.clientID, self.leftJointDynamic,  t_left,  vrep.simx_opmode_oneshot_wait)
+    vrep.simxSetJointTargetVelocity(self.clientID, self.rightJointDynamic, t_right, vrep.simx_opmode_oneshot_wait)
+</pre>
+<p></p>
+<br />操作練習 << <a href='操作練習.html'>Previous</a> <a href='零組件繪製.html'>Next</a> >> 零組件繪製</div>
         
     <!-- footer -->
       <div class="container">
