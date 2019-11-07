@@ -154,14 +154,71 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">CMSiMDE << <a href='CMSiMDE.html'>Previous</a> <a href='Solvespace 編譯.html'>Next</a> >> Solvespace 編譯<br /><h1>設定識別資料</h1>
-<p>1. 設定使用者名稱及電子郵件</p>
-<p>git config  --global user.name  "username"</p>
-<p><span>git config  --global user.email  "e<span>mail</span>"</span></p>
-<p><span>2. 通過代理主機連接HTTP</span></p>
-<p><span>git config  --global http.proxy<span> [位址]:連接阜</span></span></p>
-<p><span></span></p>
-<p></p><br />CMSiMDE << <a href='CMSiMDE.html'>Previous</a> <a href='Solvespace 編譯.html'>Next</a> >> Solvespace 編譯</div>
+    <div id="tipue_search_content">about內容變更 << <a href='about內容變更.html'>Previous</a> <a href='零組件繪製.html'>Next</a> >> 零組件繪製<br /><h1>V-rep</h1>
+<p>參數式繪圖軟體 Solvespace 編譯、零組件繪圖與應用.</p>
+<p>利用 <a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a><span> 學習如何完成 <a href="https://github.com/solvespace/solvespace">https://github.com/solvespace/solvespace</a> 原始碼的編譯, 並透過 <a href="http://solvespace.com/">http://solvespace.com</a> 學習如何建立 <a href="https://github.com/mdecourse/mocad/files/3583773/web_vrep2.zip">web_rep2.zip</a> 中所需的行走車.</span></p>
+<p><span>其中必須將所建立的零組件轉入 <a href="https://drive.google.com/file/d/1cZFSsLEoGOBYojzKzFEf4YH2l--pbS-9/view?usp=sharing">V-rep 3.6.1 rev 4.7z</a><span> 進行運動組立後, 以 Lua 或 Python 進行控制.</span></span></p>
+<p><span><span>網際 V-rep 模型控制:<span> </span><a href="https://github.com/mdecourse/mocad/files/3583773/web_vrep2.zip">web_vrep2.zip</a> (<a href="http://mde.tw/cad2019/downloads/web_vrep2.zip">local</a>)</span></span></p>
+<p><span>app.py</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template, redirect
+from vrep_linefollower import VrepLineFollower
+ 
+line_follower = VrepLineFollower()
+ 
+app = Flask(__name__)
+ 
+@app.route("/")
+def index():
+  return render_template('controls.html')
+ 
+@app.route('/do/&lt;direction&gt;')
+def do(direction):
+  global line_follower
+  line_follower.to_direction(direction)
+  return redirect('/')
+ 
+ 
+if __name__ == '__main__':
+  app.run(host='127.0.0.1')</pre>
+<p></p>
+<p><span>vrep_linefollower.py</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import vrep
+ 
+class VrepLineFollower:
+  def __init__(self):
+    vrep.simxFinish(-1) # just in case, close all opened connections
+    self.clientID = vrep.simxStart('127.0.0.1', 19997, True, True, 5000, 5)
+ 
+    self.wheelRadius = 0.027
+    self.linearVelocityLeft  = 0.1
+    self.linearVelocityRight = 0.1
+ 
+    # vectors [left, right]
+    self.direction_v = {
+     'up':    [ 0.01,  0.01],
+     'down':  [-0.01, -0.01],
+     'left':  [-0.01,  0.01],
+     'right': [ 0.01, -0.01]
+    }
+ 
+    res, self.leftJointDynamic  = vrep.simxGetObjectHandle(self.clientID, "DynamicLeftJoint",  vrep.simx_opmode_oneshot_wait)
+    res, self.rightJointDynamic = vrep.simxGetObjectHandle(self.clientID, "DynamicRightJoint", vrep.simx_opmode_oneshot_wait)
+ 
+  # direction = 'up' | 'down' | 'left' | 'right'
+  def to_direction(self, direction):
+    direction_vector = self.direction_v[direction]
+    self.linearVelocityLeft  += direction_vector[0]
+    self.linearVelocityRight += direction_vector[1]
+    self.set_motors()
+ 
+  # private
+  def set_motors(self):
+    t_left  = self.linearVelocityLeft  / self.wheelRadius
+    t_right = self.linearVelocityRight / self.wheelRadius
+    vrep.simxSetJointTargetVelocity(self.clientID, self.leftJointDynamic,  t_left,  vrep.simx_opmode_oneshot_wait)
+    vrep.simxSetJointTargetVelocity(self.clientID, self.rightJointDynamic, t_right, vrep.simx_opmode_oneshot_wait)
+</pre>
+<p></p><br />about內容變更 << <a href='about內容變更.html'>Previous</a> <a href='零組件繪製.html'>Next</a> >> 零組件繪製</div>
         
     <!-- footer -->
       <div class="container">
