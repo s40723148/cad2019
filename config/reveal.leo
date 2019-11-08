@@ -314,7 +314,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="leo.20191108101006.5">## 將 Solvespace 中 about 加入This is complied by (學號)
 
-## [KMOLab](https://s40723148.github.io/cad2019/content/about%E5%85%A7%E5%AE%B9%E8%AE%8A%E6%9B%B4.html)</t>
+## [影片](https://s40723148.github.io/cad2019/content/about%E5%85%A7%E5%AE%B9%E8%AE%8A%E6%9B%B4.html)</t>
 <t tx="leo.20191108101105.1">&lt;section&gt;
 @others
 &lt;/section&gt;
