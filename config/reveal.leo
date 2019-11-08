@@ -266,9 +266,10 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108095136.2"># W6 編譯Solvespace
+<t tx="leo.20191108095136.2">## W6 用Solvespace繪製參數化零組件 &amp;  V-rep 模擬控制
 
-</t>
+## [solvespace](https://s40723148.github.io/cad2019/content/%E9%9B%B6%E7%B5%84%E4%BB%B6%E7%B9%AA%E8%A3%BD.html)
+## [V-rep](https://s40723148.github.io/cad2019/content/%E7%B6%B2%E9%9A%9B%20V-rep%20%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6.html)</t>
 <t tx="leo.20191108095238.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
