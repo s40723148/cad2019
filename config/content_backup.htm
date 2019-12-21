@@ -21,14 +21,16 @@
 <p>markdown 與 pelican 在 CMSiMDE 主要用來產生靜態網誌, 而網誌的設計與編輯則透過 Leo Editor 進行, 此外 CMSiMDE 除了網際內容管理與網誌之外, 還透過 Leo Editor 管理 reveal.js 網際簡報系統.</p>
 <p>flask_cors 模組, 在 CMSiMDE 是為了配合 Dartpad 程式編寫過程, 需要跨網站擷取資料的需求而加入, 在舊版的可攜系統中若無此模組, 執行 CMSiMDE 之前必須透過</p>
 <p>python -m pip install flask_cors </p>
-<p>安裝</p><h3>設定識別資料</h3>
+<p>安裝</p>
+<h3>設定識別資料</h3>
 <p>1. 設定使用者名稱及電子郵件</p>
 <p>git config  --global user.name  "username"</p>
 <p><span>git config  --global user.email  "e<span>mail</span>"</span></p>
 <p><span>2. 通過代理主機連接HTTP</span></p>
 <p><span>git config  --global http.proxy<span> [位址]:連接阜</span></span></p>
 <p><span></span></p>
-<p></p><h1>Solvespace 編譯</h1>
+<p></p>
+<h1>Solvespace 編譯</h1>
 <h4>編譯步驟:</h4>
 <p>git version 查驗 git 版本</p>
 <p>git 2.13 版本以上, 可以使用下列 git clone<span> </span><span>--recurse-submodules 取得所有子模組資料</span></p>
@@ -79,7 +81,8 @@
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/i2odwUdKlko" width="560"></iframe></p>
 <p></p>
 <h2>about內容變更</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/w9ZRkZWEYh4" width="560"></iframe></p><h1>V-rep</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/w9ZRkZWEYh4" width="560"></iframe></p>
+<h1>V-rep</h1>
 <p>參數式繪圖軟體 Solvespace 編譯、零組件繪圖與應用.</p>
 <p>利用 <a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a><span> 學習如何完成 <a href="https://github.com/solvespace/solvespace">https://github.com/solvespace/solvespace</a> 原始碼的編譯, 並透過 <a href="http://solvespace.com/">http://solvespace.com</a> 學習如何建立 <a href="https://github.com/mdecourse/mocad/files/3583773/web_vrep2.zip">web_rep2.zip</a> 中所需的行走車.</span></p>
 <p><span>其中必須將所建立的零組件轉入 <a href="https://drive.google.com/file/d/1cZFSsLEoGOBYojzKzFEf4YH2l--pbS-9/view?usp=sharing">V-rep 3.6.1 rev 4.7z</a><span> 進行運動組立後, 以 Lua 或 Python 進行控制.</span></span></p>
@@ -143,7 +146,10 @@ class VrepLineFollower:
     vrep.simxSetJointTargetVelocity(self.clientID, self.leftJointDynamic,  t_left,  vrep.simx_opmode_oneshot_wait)
     vrep.simxSetJointTargetVelocity(self.clientID, self.rightJointDynamic, t_right, vrep.simx_opmode_oneshot_wait)
 </pre>
-<p></p><h2>零組件繪製</h2>
+<p></p>
+<h2>零組件繪製</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/khVFSFVisGI" width="560"></iframe></p>
-<p><iframe height="600" src="/get_page/ss/33.html" width="800"></iframe></p><h2>網際 V-rep 模型控制</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/AGTT7MwK_ds" width="560"></iframe></p><h2>新增啟動與停止按鈕</h2>
+<h2>網際 V-rep 模型控制</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/AGTT7MwK_ds" width="560"></iframe></p>
+<h2>新增啟動與停止按鈕</h2>
+<h1>W15</h1>
