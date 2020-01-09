@@ -154,36 +154,18 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">設定識別資料 << <a href='設定識別資料.html'>Previous</a> <a href='操作練習.html'>Next</a> >> 操作練習<br /><h1>Solvespace 編譯</h1>
-<h4>編譯步驟:</h4>
-<p>git version 查驗 git 版本</p>
-<p>git 2.13 版本以上, 可以使用下列 git clone<span> </span><span>--recurse-submodules 取得所有子模組資料</span></p>
-<p>git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</p>
-<p>==========================================================</p>
-<p>上述指令同:</p>
-<p>git clone <span><a href="https://github.com/solvespace/solvespace.git">https://github.com/solvespace/solvespace.git</a> </span></p>
-<p><span>cd solvespace</span></p>
-<p><span>git submodule init</span></p>
-<p><span>git submodule update</span></p>
-<p>==========================================================</p>
-<p>編輯Y:\tmp\solvespace\extlib\angle\CMakeLists.txt</p>
-<p><span>list(APPEND ANGLE_DEFINITIONS</span><br/><span>-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")</span><br/><span>endif()</span></p>
-<p>改為 :</p>
-<p><span style="background-color: #0000ff;">#</span>list(APPEND ANGLE_DEFINITIONS<br/><span style="background-color: #0000ff;">#"</span>-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")<br/>endif()</p>
-<p>==========================================================</p>
-<p>接著需要手動進行 libpng.dll.a 的編譯, 並改名為 libpng_static.a, 並放到編譯系統的 lib 目錄中 (即隨身系統的 msys64\mingw64\lib 目錄):</p>
-<p>cd solvespace</p>
-<p>cd extlib</p>
-<p>cd libpng</p>
-<p>mkdir build</p>
-<p>cd build</p>
-<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release<br/>mingw32-make</p>
-<p>(mingw32-make -Wl,-static)</p>
-<p>==========================================================</p>
-<p>接著回到 solvespace 原始碼目錄, 建立 build 目錄後進入 build 目錄, 執行:</p>
-<p><span>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</span><br/><span>mingw32-make</span></p>
-<p><iframe height="600" src="/get_page/cube.html" width="800"></iframe></p>
-<br />設定識別資料 << <a href='設定識別資料.html'>Previous</a> <a href='操作練習.html'>Next</a> >> 操作練習</div>
+    <div id="tipue_search_content">W17 個人任務 << <a href='W17 個人任務.html'>Previous</a> <a href='任務二.html'>Next</a> >> 任務二<br /><h1>任務一</h1>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment">教材</a>翻譯</p>
+<p><span><strong>Hands-on #1: </strong>Make sure the my_first_simulation.wbt world file is open, and that the simulation is paused and is at a virtual time of 0. Using the File / Save World As... menu, save the simulation as obstacles.wbt.</span></p>
+<p><span><br/>確保先前儲存的文件已經打開,並將模擬暫停及時間歸零,在另存成obstacles.wbt</span></p>
+<p><span><br/><span><span><strong>Hands-on #2:</strong><span> </span></span>To remove the RectangleArena, select it either in the 3D view or in the scene tree view with a left click and press the Delete key on your keyboard. Alternatively, you can right click on it in the 3D view and select Delete in the context menu (you can also use the context menu directly in the scene tree view). Select the TexturedBackroundLight node and click on the Add button. In the open dialog box, and choose PROTO nodes (Webots Projects) / objects / floors / Floor (Solid).</span></span></p>
+<p><span><br/>在3D試圖或場景樹中將 RectangleArenag 刪除並點選 TexturedBackroundLight 再點 add 並依路徑選擇 PROTO nodes (Webots Projects) / objects / floors / Floor (Solid)</span></p>
+<p><span><br/><span><strong><span>Hands-on #3:</span><span> </span></strong>In the scene tree view select and expand the Floor. Modify the size field and set it to {1, 1} to resize it to 1mx1m.</span></span></p>
+<p><span><br/>將 Floor 展開 將 size 字段修改成 1X1</span></p>
+<h4><span><span>The solid node</span>(實體節點)</span></h4>
+<p><span><span>A Solid node represents a rigid body,To define a rigid body, you will have to create a Solid node. Inside this node you will set up different sub-nodes corresponding to the characteristics of the rigid body. The following figure depicts a rigid body and its sub-nodes. The graphical representation of the Solid node is defined by the Shape nodes populating its children list. The collision bounds are defined in its boundingObject field. The graphical representation and the collision shape are often but not necessarily identical. Finally, the physics field defines if the object belongs to the dynamical or to the static environment. All these sub-nodes are optional, but the physics field needs the boundingObject to be defined.</span></span></p>
+<p><span><br/>Solid節點代表一個剛體,在節點內可依缸體特性設置子節點,下圖描繪了剛體及子節點 下圖以 Shape 定義 Solid節點中的children。在 boundingObject 字段中定義碰撞範圍。圖形表示與碰撞形狀不一定相同。physics字段是定義屬於動態環境或靜態環境,但需要 boundingObject 定義該字段。</span></p>
+<p><span><img alt="" height="292" src="./../images/chrome_cbYdFdX3cr.png" width="345"/></span></p><br />W17 個人任務 << <a href='W17 個人任務.html'>Previous</a> <a href='任務二.html'>Next</a> >> 任務二</div>
         
     <!-- footer -->
       <div class="container">
