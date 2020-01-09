@@ -34,6 +34,9 @@
 <v t="leo.20191108101838.1"><vh>導入影片</vh>
 <v t="leo.20191108101838.2"><vh>iframe 導入影片</vh></v>
 </v>
+<v t="leo.20200110004237.1"><vh>導入影片</vh>
+<v t="leo.20200110004237.2"><vh>iframe 導入影片</vh></v>
+</v>
 </v>
 <v t="leo.20191108095057.1"><vh>快捷鍵</vh>
 <v t="leo.20191108095057.2"><vh>投影片快捷鍵</vh></v>
@@ -42,14 +45,11 @@
 <v t="leo.20191108095136.2"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="leo.20191108095238.1"><vh>快捷鍵</vh>
-<v t="leo.20191108095238.2"><vh>投影片快捷鍵</vh></v>
+<v t="leo.20200110005428.1"><vh>導入影片</vh>
+<v t="leo.20200110005428.2"><vh>iframe 導入影片</vh></v>
 </v>
-<v t="leo.20191108101006.1"><vh>各式內容引用範例</vh>
-<v t="leo.20191108101006.2"><vh>導入數學符號與方程式</vh>
-<v t="leo.20191108101006.3"><vh>LaTeX 格式方程式</vh></v>
-</v>
-<v t="leo.20191108101006.4"><vh>導入縮排程式碼</vh>
-<v t="leo.20191108101006.5"><vh>引用程式碼</vh></v>
+<v t="leo.20200110005353.1"><vh>導入影片</vh>
+<v t="leo.20200110005353.2"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
 </v>
@@ -62,9 +62,9 @@
 </vnodes>
 <tnodes>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## CMSimfly 網際內容管理
+<t tx="leo.20180902120523.10"># CAD 2019
 
-### 40723148
+
 
 &lt;small&gt;
 Created by [40723148](https://s40723148.github.io/cad2019/content/index.html)
@@ -253,10 +253,9 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108095057.2"># W4.5 Solvespace基本繪圖
-
-## [影片](https://s40723148.github.io/cad2019/content/%E6%93%8D%E4%BD%9C%E7%B7%B4%E7%BF%92.html)
-</t>
+<t tx="leo.20191108095057.2">## W11-W15 學習摘要
+* 執行Webots課程(進度至 Tutorial 6)
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/07118PTW5d8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20191108095136.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -266,56 +265,16 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108095136.2">## W6 用Solvespace繪製參數化零組件 &amp;  V-rep 模擬控制
-
-## [solvespace](https://s40723148.github.io/cad2019/content/%E9%9B%B6%E7%B5%84%E4%BB%B6%E7%B9%AA%E8%A3%BD.html)
-## [V-rep](https://s40723148.github.io/cad2019/content/%E7%B6%B2%E9%9A%9B%20V-rep%20%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6.html)</t>
-<t tx="leo.20191108095238.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+<t tx="leo.20191108095136.2">## W16 越野車零組件設計繪圖
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/bbgS0tKb1Fk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20191108095238.1">&lt;section&gt;
 @others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20191108095238.2"># W7 Solvespace 繪圖驗證
-## [影片](https://s40723148.github.io/cad2019/content/%E7%B9%AA%E5%9C%96%E9%A9%97%E8%AD%89.html)
-
-</t>
-<t tx="leo.20191108101006.1">&lt;section&gt;
-@others
-&lt;/section&gt;
-
-</t>
-<t tx="leo.20191108101006.2">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
 &lt;/section&gt;
 
 
 
 						
 </t>
-<t tx="leo.20191108101006.3"># W8 建立網誌&amp;編譯Solvespace
-
-## [網誌](https://s40723148.github.io/cad2019/blog/index.html)</t>
-<t tx="leo.20191108101006.4">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="leo.20191108101006.5">## 將 Solvespace 中 about 加入This is complied by (學號)
-
-## [影片](https://s40723148.github.io/cad2019/content/about%E5%85%A7%E5%AE%B9%E8%AE%8A%E6%9B%B4.html)</t>
 <t tx="leo.20191108101105.1">&lt;section&gt;
 @others
 &lt;/section&gt;
@@ -332,7 +291,9 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108101105.3"># W3 編譯Solvespace</t>
+<t tx="leo.20191108101105.3">## W3 ~ W8 學習摘要
+* Solvespace 編譯&amp;繪圖
+* V-rep 網際控制模擬&amp;應用</t>
 <t tx="leo.20191108101105.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -344,8 +305,8 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108101105.5">##### 1. git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace
-##### 2. 編輯Y:\tmp\solvespace\extlib\angle\CMakeLists.txt (713&amp;714 前面加 # )</t>
+<t tx="leo.20191108101105.5">* Solvespace [編譯影片](https://youtu.be/tZi5jM7piZ0)
+* Solvespace about [編譯影片](https://youtu.be/w9ZRkZWEYh4)</t>
 <t tx="leo.20191108101105.6">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -355,21 +316,13 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108101105.7">#### 3.手動進行 libpng.dll.a 的編譯
-
-##### cd solvespace
-
-##### cd extlib
-
-##### cd libpng
-
-##### mkdir build
-
-##### cd build
-
-##### cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
-
-##### mingw32-make</t>
+<t tx="leo.20191108101105.7">## Solvespace 參數繪圖
+* [影片](https://www.youtube.com/watch?v=9GUsgpK_qEE)
+* [影片](https://www.youtube.com/watch?v=wM_7iGqU3vI)
+* [影片](https://www.youtube.com/watch?v=SE1mQbN0h7c)
+* [影片](https://www.youtube.com/watch?v=W-302t9Swq4)
+* [影片](https://www.youtube.com/watch?v=qyTRXz3C2PA)
+* [影片](https://www.youtube.com/watch?v=Gu-OhnylMVE)</t>
 <t tx="leo.20191108101838.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -379,12 +332,40 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108101838.2">#### 4.回到 solvespace 原始碼目錄, 建立 build 目錄後進入 build 目錄
+<t tx="leo.20191108101838.2">## Solvespace 參數化零組件
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/khVFSFVisGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200110004237.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
 
-#### 執行 :
 
-#### 1. cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+						
+</t>
+<t tx="leo.20200110004237.2">## V-rep 網際模擬
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/AGTT7MwK_ds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200110005353.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
 
-#### 2.mingw32-make</t>
+
+						
+</t>
+<t tx="leo.20200110005353.2">## W17 行走機構模擬
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/6_RkzOYagfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200110005428.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200110005428.2">## W17 協同任務
+* [相關網站](https://s40723148.github.io/cad2019ag1/content/40723148.html)</t>
 </tnodes>
 </leo_file>
