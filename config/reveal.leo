@@ -305,8 +305,8 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20191108101105.5">* Solvespace [編譯影片](https://youtu.be/tZi5jM7piZ0)
-* Solvespace about [編譯影片](https://youtu.be/w9ZRkZWEYh4)</t>
+<t tx="leo.20191108101105.5">* Solvespace [編譯影片](https://youtu.be/tZi5jM7piZ0) [網站](https://s40723148.github.io/cad2019/content/Solvespace%20%E7%B7%A8%E8%AD%AF.html)
+* Solvespace about [編譯影片](https://youtu.be/w9ZRkZWEYh4) [網站](https://s40723148.github.io/cad2019/content/about%E5%85%A7%E5%AE%B9%E8%AE%8A%E6%9B%B4.html)</t>
 <t tx="leo.20191108101105.6">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -317,12 +317,8 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20191108101105.7">## Solvespace 參數繪圖
-* [影片](https://www.youtube.com/watch?v=9GUsgpK_qEE)
-* [影片](https://www.youtube.com/watch?v=wM_7iGqU3vI)
-* [影片](https://www.youtube.com/watch?v=SE1mQbN0h7c)
-* [影片](https://www.youtube.com/watch?v=W-302t9Swq4)
-* [影片](https://www.youtube.com/watch?v=qyTRXz3C2PA)
-* [影片](https://www.youtube.com/watch?v=Gu-OhnylMVE)</t>
+#### 操作練習[網站](https://s40723148.github.io/cad2019/content/%E6%93%8D%E4%BD%9C%E7%B7%B4%E7%BF%92.html)
+#### 繪圖驗證[網站](https://s40723148.github.io/cad2019/content/%E7%B9%AA%E5%9C%96%E9%A9%97%E8%AD%89.html)</t>
 <t tx="leo.20191108101838.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
